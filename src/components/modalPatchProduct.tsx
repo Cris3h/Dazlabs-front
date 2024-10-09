@@ -49,7 +49,7 @@ const ModalPatchProducts: React.FC<ModalProps> = ({ isOpen, onClose, productId }
     try {
       await patchProduct(productId, formData);
       alert('Product updated successfully!');
-      onClose(); // Cerramos el modal tras la actualización
+      onClose(); // patch and then close the modal :D 
     } catch (error) {
       console.error('Error updating product:', error);
     }

@@ -4,9 +4,9 @@ import { NewProduct } from "@/interfaces/products";
 export const postProduct = async (productData: NewProduct) => {
     const { title, category, price, image } = productData;
     const data = { title, category, price, image: `http://${image}` };
-    console.log(data);
+
     try {
-      const response = await axios.post('http://localhost:8080/products', data, {
+      const response = await axios.post(`${process.env.NEXT_PUBLIC_SERVER_URL}/products`, data, {
         headers: {
           'Content-Type': 'application/json',
         },

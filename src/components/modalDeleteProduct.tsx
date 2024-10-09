@@ -6,7 +6,7 @@ const ModalDeleteProduct: React.FC<ModalProps> = ({ isOpen, onClose, productId }
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:8080/products/${productId}`);
+      await axios.delete(`${process.env.NEXT_PUBLIC_SERVER_URL}/products/${productId}`);
       alert('Product deleted successfully!');
       onClose();
     } catch (error) {

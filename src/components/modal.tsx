@@ -6,7 +6,7 @@ import { getProductByID } from '@/fetchs/getProductById';
 export type ModalProps = {
   isOpen: boolean;
   onClose: () => void;
-  productId: string; //mandatory! <--- almost got insane here
+  productId: string; // mandatory! <--- almost got insane here
 };
 
 export type ProductDetails = {
