@@ -2,6 +2,8 @@ import { ModalProps } from "./modal";
 import axios from "axios";
 
 const ModalDeleteProduct: React.FC<ModalProps> = ({ isOpen, onClose, productId }) => {
+
+
   const handleDelete = async () => {
     try {
       await axios.delete(`http://localhost:8080/products/${productId}`);
@@ -12,7 +14,12 @@ const ModalDeleteProduct: React.FC<ModalProps> = ({ isOpen, onClose, productId }
     }
   };
 
+
+
   if (!isOpen) return null;
+
+
+
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
