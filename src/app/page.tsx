@@ -87,7 +87,7 @@ const Page = () => {
           </button>
           <button
             onClick={() =>
-              setCurrentPage((prev) => Math.min(prev + 1, products.totalPages))
+              setCurrentPage((prev) => Math.min(prev + 1, products ? products.totalPages : 1))
             }
             disabled={!products?.hasNext}
             className={`ml-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition duration-200 ${
