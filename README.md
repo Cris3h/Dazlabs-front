@@ -46,11 +46,6 @@ cd client
 npm install
 ```
 
-### 3. Instala dependencias
-
-```bash
-npm install
-```
 ### 4. configura variables de entorno en un .env.local
 
 ```bash
